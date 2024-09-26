@@ -1,0 +1,149 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:radius="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Blood group circle -->
+        <ImageView
+            android:id="@+id/blood_group_circle"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/blood_circle"
+            android:padding="10dp"
+            app:tint="#FFFFFF" />
+
+        <!-- Blood group text -->
+
+        <!-- Request type -->
+        <TextView
+            android:id="@+id/blood_group_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/blood_group_circle"
+            android:layout_alignBottom="@+id/blood_group_circle"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="9dp"
+            android:text="A+"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/request_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/blood_group_circle"
+            android:layout_marginStart="16dp"
+            android:text="Human Blood Request"
+            android:fontFamily="@font/montserratsemibold"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <!-- Request status and date -->
+        <TextView
+            android:id="@+id/request_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/request_type"
+            android:layout_marginStart="16dp"
+            android:text="20 Jan 2022"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserratregular"
+            android:textColor="#808080"
+            android:textSize="14sp" />
+
+        <!-- Request ID -->
+        <TextView
+            android:id="@+id/request_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/request_date"
+            android:layout_marginStart="16dp"
+            android:text="Request ID: 1234"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserratregular"
+            android:textSize="14sp" />
+
+        <!-- Accepted users list -->
+        <ImageView
+            android:id="@+id/accepted_users_list"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/circle_purple"
+            android:padding="8dp"
+            android:src="@drawable/icons_user"
+            app:tint="#FFFFFF" />
+        <TextView
+            android:id="@+id/request_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accepted_users_list"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="ACCEPTED"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/montserratregular"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/complete_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/request_id"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="COMPLETE"
+            android:backgroundTint="#FF3700B3"
+            app:cornerRadius="100dp"/>
+
+        <Button
+            android:id="@+id/cancel_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/request_id"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/complete_request"
+            android:backgroundTint="#FF3700B3"
+            android:text="CANCEL"
+            app:cornerRadius="100dp" />
+
+        <Button
+            android:id="@+id/update_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/request_id"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/cancel_request"
+            android:backgroundTint="#FF3700B3"
+            android:text="RESEND"
+            app:cornerRadius="100dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

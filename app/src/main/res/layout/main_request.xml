@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_request_screen"
+    android:background="@color/white"
+    android:layout_margin="16dp">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="219dp"
+        android:background="@drawable/main_request_top"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="370dp"
+                android:layout_height="35dp"
+                android:fontFamily="@font/montserratregular"
+                android:gravity="center"
+                android:text="GIVE THE GIFT OF LIFE"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:gravity="center"
+                    android:text="DONATE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:layout_width="102dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:background="#FFFFFF"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:gravity="center"
+                    android:text="BLOOD"
+                    android:textColor="#ff8A8A"
+                    android:textSize="23sp"
+                    tools:ignore="TextContrastCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="17dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="338dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="18dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/findADonor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight=".1"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingVertical="20dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="45dp">
+
+                <LinearLayout
+                    android:layout_width="121dp"
+                    android:layout_height="138dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="87dp"
+                        android:layout_height="87dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/icons_donor_find" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="FIND A DONOR"
+                        android:textAlignment="center"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/donateBlood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight=".1"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingVertical="15dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="45dp">
+
+                <LinearLayout
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="86dp"
+                        android:layout_height="84dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/icons_donate_blood" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="DONATE BLOOD"
+                        android:textAlignment="center"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/activeRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight=".1"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingVertical="20dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="45dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="86dp"
+                    android:layout_height="84dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/icons_active_request" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="ACTIVE REQUESTS"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</FrameLayout>

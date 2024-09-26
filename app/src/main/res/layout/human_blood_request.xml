@@ -1,0 +1,271 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginBottom="50dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Human blood appeal text -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:background="@drawable/main_request_top"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/montserratsemibold"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="HUMAN BLOOD APPEAL"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/choose_blood_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratregular"
+        android:text="Choose Blood Group *"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Blood group icons in a horizontal LinearLayout -->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/blood_group_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <!-- A button for each blood group -->
+            <Button
+                android:id="@+id/group_a_pos_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="A+"
+                android:tag="A+"/>
+
+            <Button
+                android:id="@+id/group_a_neg_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="A-"
+                android:tag="A-"/>
+
+            <Button
+                android:id="@+id/group_b_pos_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="B+"
+                android:tag="B+"/>
+
+            <Button
+                android:id="@+id/group_b_neg_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="B-"
+                android:tag="B-"/>
+
+            <Button
+                android:id="@+id/group_ab_pos_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="AB+"
+                android:tag="AB+"/>
+
+            <Button
+                android:id="@+id/group_ab_neg_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="AB-"
+                android:tag="AB-"/>
+
+            <Button
+                android:id="@+id/group_o_pos_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="O+"
+                android:tag="O+"/>
+
+            <Button
+                android:id="@+id/group_o_neg_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF0000"
+                app:cornerRadius="1000in"
+                android:text="O-"
+                android:tag="O-"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/human_units"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratregular"
+        android:text="Blood Units Required *"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/noOfUnitsInputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:hint="Enter number of blood units you need"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+    <TextView
+        android:id="@+id/human_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratregular"
+        android:text="Description"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/descriptionInputField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:hint="Give details"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+    <TextView
+        android:id="@+id/when"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratregular"
+        android:text="When ? *"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/immediate_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Immediate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF0000"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/icons_tick"
+            android:drawablePadding="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="8dp"
+            android:text="OR"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/calendar_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="Other"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF0000"
+            app:cornerRadius="100dp"
+            app:icon="@drawable/icons_calendar"
+            android:drawablePadding="8dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/initiate_human_request_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="70dp"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:backgroundTint="#FF0000"
+        app:cornerRadius="100dp"
+        android:drawablePadding="0dp"
+        android:text="SEND REQUEST" />
+
+
+</LinearLayout>
